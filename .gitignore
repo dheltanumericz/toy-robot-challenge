@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/toy-robot-challenge-tests/obj
+/toy-robot-challenge-tests/bin/Debug/net6.0
+/.vs/toy-robot-challenge/DesignTimeBuild
+/toy-robot-challenge-console/bin/Debug/net6.0
+/toy-robot-challenge-console/obj
+/.vs/toy-robot-challenge/v17
