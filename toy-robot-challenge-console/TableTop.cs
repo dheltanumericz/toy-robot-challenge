@@ -1,4 +1,4 @@
-namespace toy_robot_challenge_console
+namespace ToyRobot
 {
     public interface ITableTop
     {
