@@ -27,6 +27,8 @@ namespace ToyRobot
                 if (!Enum.TryParse<Command>(commands[0], out Command commandResult)) return result;
 
                 // We need a parameter of PLACE is the command
+                if (commandResult == Command.PLACE && commands.Length == 1) return result;
+                
                 if (commandResult == Command.PLACE && commands.Length == 2)
                 {
                     var parameters = commands[1].Split(",", StringSplitOptions.TrimEntries);
@@ -36,6 +38,7 @@ namespace ToyRobot
 
                     if (!int.TryParse(parameters[0], out int x)) return result;
                     if (!int.TryParse(parameters[1], out int y)) return result;
+                    if (!VALID_DIRECTIONS.Contains(parameters[2])) return result;
                     if (!Enum.TryParse<Direction>(parameters[2], out Direction directionResult)) return result;
 
                     result.Parameters.Row = x;

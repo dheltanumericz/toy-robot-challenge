@@ -67,5 +67,16 @@ namespace ToyRobotTests
             command.Parameters.Row.Should().Be(0);
             command.Parameters.Direction.Should().Be(Direction.NONE);
         }
+
+        [Fact]
+        public void ReturnAnInvalidCommandWhenCommandIsPlaceWithNoParams()
+        {
+            var command = _commandProcessor.Process("PLACE");
+
+            command.Command.Should().Be(Command.INVALID);
+            command.Parameters.Column.Should().Be(0);
+            command.Parameters.Row.Should().Be(0);
+            command.Parameters.Direction.Should().Be(Direction.NONE);
+        }
     }
 }
