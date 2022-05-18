@@ -46,6 +46,13 @@ The application should handle error states appropriately and be robust to user i
 The toy robot must not fall off the table during movement. This also includes the initial placement of the toy robot. Any
 move that would cause the robot to fall must be ignored.
 
+## How to run the application
+
+- Clone this repository <https://github.com/dheltanumericz/toy-robot-challenge>
+- Open in Visual Studio or Visual Studio Code
+- Press F5 or Ctrl-5 to Run the application
+- Perform robot command in the console
+
 ## Example Input and Output
 
 ```
