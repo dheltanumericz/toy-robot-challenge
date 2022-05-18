@@ -81,6 +81,26 @@ namespace ToyRobotTests
             report.Should().Be("Nothing to report. Please make sure the PLACE command executed first.");
         }
 
+        [Fact]
+        public void ShouldNotFallFromTheTable()
+        {
+            _robot.Place(4, 2, Direction.WEST);
+            _robot.Move();
+            _robot.Move();
+            _robot.Move();
+            _robot.Move();
+            _robot.Move();
+            _robot.Move();
+            _robot.Move();
+            _robot.Move();
+            var report = _robot.Report();
+
+            _robot.currentRow.Should().Be(0);
+            _robot.currentColumn.Should().Be(2);
+            _robot.Direction.Should().Be(Direction.WEST);
+            report.Should().Be($"Output: {_robot.currentRow},{_robot.currentColumn},{_robot.Direction}");
+        }
+
 
     }
 }
